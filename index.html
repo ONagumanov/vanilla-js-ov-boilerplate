@@ -63,7 +63,7 @@
 
 <body>
     <main>
-        <h1>Самому надо!</h1>
+        <h1 align="center">Самому надо!</h1>
         <div align="center">
             <a href="https://ton.org/"><img width="200" src="./assets/Dima.jpeg" alt="Betonator in work"></a>
         </div>
@@ -87,6 +87,7 @@
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
+        Telegram.WebApp.SettingsButton.hide();
 
         // Function to call showPopup API
         function showPopup() {
@@ -99,7 +100,7 @@
                 ]
             }, function(btn) {
                 if (btn === 'link') {
-                    Telegram.WebApp.openLink('https://ton.org/');
+                    Telegram.WebApp.close();
                 }
             });
         };
