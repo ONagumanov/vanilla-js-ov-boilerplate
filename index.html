@@ -65,7 +65,7 @@
     <main>
         <h1 align="center">Самому надо!</h1>
         <div align="center">
-            <a href="https://ton.org/"><img width="200" src="./assets/Dima.jpeg" alt="Betonator in work"></a>
+            <a href="https://ton.org/"><img src="./assets/Dima.jpeg" alt="Betonator in work"></a>
         </div>
 
     </main>
@@ -81,13 +81,12 @@
 
         // Show main button
         Telegram.WebApp.MainButton.setParams({
-            text: 'Main Button'
+            text: 'Помочь парню'
         });
         Telegram.WebApp.MainButton.onClick(function () {
-            Telegram.WebApp.showAlert('Main Button was clicked')
+            Telegram.WebApp.close()
         });	
-        Telegram.WebApp.MainButton.show();
-        Telegram.WebApp.SettingsButton.hide();
+        Telegram.WebApp.MainButton.show()
 
         // Function to call showPopup API
         function showPopup() {
@@ -134,8 +133,5 @@
 
     </script>
 
-    <!-- Eruda is console for mobile browsers -->
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>eruda.init();</script>
 </body>
 </html>
